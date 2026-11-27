@@ -1,0 +1,17 @@
+Bundled third-party components (check each project's licence before redistributing commercially).
+
+MediaPipe Tasks Vision 0.10.14 (Google), Apache-2.0
+  vendor/mediapipe/  from npm @mediapipe/tasks-vision
+MediaPipe Hand Landmarker model (Google), Apache-2.0
+  models/hand_landmarker.task  copy taken from npm @beautinique/frontend-tryon-assets@1.0.2
+MediaPipe Selfie Segmenter model (Google), Apache-2.0
+  models/selfie_segmenter.tflite  copy taken from npm @novartc/novartc-ucp-blur@1.0.1
+MI-GAN inpainting model (Picsart AI Research), MIT per the original project
+  models/migan_pipeline_v2.onnx  from npm migan-onnx@1.0.0; weights re-saved as float16 here to reduce size
+ONNX Runtime Web 1.20.1 (Microsoft), MIT
+  vendor/ort/  from npm onnxruntime-web
+
+SHA-256
+fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1  models/hand_landmarker.task
+f3731f23c4937cccd116610ba67ddfd153b3c201aedbc739575807550babded5  models/migan_pipeline_v2.onnx
+191ac9529ae506ee0beefa6b2c945a172dab9d07d1e802a290a4e4038226658b  models/selfie_segmenter.tflite

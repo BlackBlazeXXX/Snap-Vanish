@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Snap Vanish</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/48.png" alt="">
+    <h1>Snap Vanish</h1>
+    <label class="switch" title="On / off">
+      <input type="checkbox" id="enabled" aria-label="Snap Vanish on or off">
+      <span></span>
+    </label>
+  </header>
+
+  <div id="status" role="status">Checking…</div>
+
+  <button id="snap" class="primary">Snap now</button>
+  <p class="hint">Shortcut: <kbd id="shortcut">…</kbd> · <a href="#" id="change">change</a></p>
+
+  <div class="field">
+    <span><label for="sensitivity">Snap sensitivity</label> <output id="sensitivityOut"></output></span>
+    <input type="range" id="sensitivity" min="1" max="10" step="1">
+    <small><b>Strict</b><b>Forgiving</b></small>
+  </div>
+
+  <div class="field">
+    <span><label for="duration">Dust duration</label> <output id="durationOut"></output></span>
+    <input type="range" id="duration" min="1" max="6" step="0.5">
+  </div>
+
+  <div class="field">
+    <span><label for="direction">Dust direction</label> <em>(as others see it)</em></span>
+    <select id="direction">
+      <option value="up-right">↗ Up and right</option>
+      <option value="right">→ Right</option>
+      <option value="left">← Left</option>
+      <option value="up-left">↖ Up and left</option>
+      <option value="up">↑ Up</option>
+      <option value="down">↓ Down</option>
+    </select>
+  </div>
+
+  <label class="toggle">
+    <input type="checkbox" id="debugHands">
+    <span>Hand tracking debug</span>
+  </label>
+
+  <div class="row">
+    <button id="capture" title="You get 5 seconds to step out of the picture">Capture empty room</button>
+    <button id="relearn">Re-learn room</button>
+  </div>
+  <button id="practice">Open practice room</button>
+  <p class="hint">🔒 Video and audio are processed on this computer.</p>
+  <script src="popup.js"></script>
+</body>
+</html>

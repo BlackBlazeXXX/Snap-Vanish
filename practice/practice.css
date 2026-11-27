@@ -1,0 +1,16 @@
+:root { color-scheme: dark; }
+body { margin: 0; background: #17131c; color: #f4eefa; font: 15px/1.5 system-ui, sans-serif; }
+main { max-width: 860px; margin: 0 auto; padding: 24px 16px 40px; }
+h1 { margin: 0 0 4px; }
+.stage { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 12px; overflow: hidden; }
+.stage video, .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+video { object-fit: contain; }
+video.mirror { transform: scaleX(-1); }
+#overlay { pointer-events: none; }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 12px 0; }
+button { padding: 9px 18px; border-radius: 8px; border: 0; background: #f09a45; color: #1c1008; font: inherit; font-weight: 700; cursor: pointer; }
+button:disabled { opacity: .45; cursor: default; }
+.meter { display: flex; align-items: center; gap: 10px; }
+.meter .track { flex: 0 0 300px; max-width: 60%; height: 10px; background: #241d2c; border-radius: 5px; overflow: hidden; }
+.meter i { display: block; height: 100%; width: 0; background: #6fd08c; border-radius: 5px; }
+pre { background: #241d2c; padding: 12px; border-radius: 8px; white-space: pre-wrap; min-height: 6em; }

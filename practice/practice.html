@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Snap Vanish practice room</title>
+<link rel="stylesheet" href="practice.css">
+</head>
+<body>
+  <main>
+    <h1>Practice room</h1>
+    <p>This is exactly what other people would see. Nothing is sent anywhere.</p>
+    <div class="stage">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="overlay" hidden aria-hidden="true"></canvas>
+    </div>
+    <div class="row">
+      <button id="start">Start camera</button>
+      <button id="snap" disabled>Snap now</button>
+      <label><input type="checkbox" id="mirror"> Mirror preview</label>
+      <label><input type="checkbox" id="debugHands"> Show hand tracking</label>
+    </div>
+    <div class="meter"><span>Mic sent to meeting</span><div class="track"><i id="level" role="meter" aria-label="Outgoing microphone level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></i></div></div>
+    <pre id="info">Click “Start camera” and allow camera and microphone.</pre>
+    <ol>
+      <li>Wait until the room says <b>ready</b>. Lean left and right once so more of the real room gets seen.</li>
+      <li>Hold your hand in view, palm toward the camera or side-on. Press thumb and middle finger together for a moment, then snap.</li>
+      <li>If a real snap is missed, raise <b>Snap sensitivity</b> in the extension popup.</li>
+    </ol>
+  </main>
+  <script src="../content/detector.js"></script>
+  <script src="../content/renderer.js"></script>
+  <script src="../content/bridge.js"></script>
+  <script src="../content/main.js"></script>
+  <script src="practice.js"></script>
+</body>
+</html>

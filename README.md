@@ -328,4 +328,4 @@ See [`licenses/THIRD_PARTY.txt`](licenses/THIRD_PARTY.txt) and [`licenses/Apache
 | **Snap motion seen, no click heard** | Raise **Snap sensitivity**, speak closer to the mic, or check if aggressive headset/OS noise suppression filtered the snap transient. |
 | **Low Hand tracking FPS (`< 12 fps`)** | Close heavy background GPU tabs/apps, keep good room lighting, or use `Alt+Shift+V` as an instant backup trigger. |
 | **Soft patches in empty room** | Click **Capture empty room** and step out of view for 5 seconds to capture your real background cleanly. |
-| **`Extension context invalidated` / updated build** | Refresh any previously open call tab once after clicking **Reload (↻)** on `chrome://extensions`. |
+| **`Extension context invalidated` / updated build** | Refresh any previously open call tab once after clicking **Reload (↻)** on `chrome://extensions`.|

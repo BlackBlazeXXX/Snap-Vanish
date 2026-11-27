@@ -179,10 +179,11 @@
   // ───────────────────────── AI engine (extension iframe) ─────────────────────────
   const engine = { port: null, status: 'off', error: '', delegate: '', inFlight: null, filling: 0, fillErrorAt: 0, offscreenFill: false, lastSend: 0, count: 0, timeouts: 0, askedAt: 0, errorAt: 0, fillMs: 0, lastResult: 0, fps: 0 };
   let renderer = null;
+  let contextLost = false;
   let lastFillCheck = 0, lastFillSent = 0, lastKnown = -1;
 
   function ensureEngine() {
-    if (engine.status === 'ready' || (engine.status === 'loading' && performance.now() - engine.askedAt < 60000)) return;
+    if (contextLost || engine.status === 'ready' || (engine.status === 'loading' && performance.now() - engine.askedAt < 60000)) return;
     if (engine.status === 'error' && performance.now() - engine.errorAt < 15000) return;
     engine.status = 'loading'; engine.askedAt = performance.now(); engine.error = '';
     send({ type: 'need-engine' });
@@ -224,7 +225,7 @@
   }
 
   function requestFill(now, force) {
-    if (!renderer || engine.status !== 'ready' || engine.filling || renderer.analysisCount < 4) return;
+    if (contextLost || !renderer || engine.status !== 'ready' || engine.filling || renderer.analysisCount < 4) return;
     if (engine.fillErrorAt && now - engine.fillErrorAt < 3000) return;
     if (!force && now - lastFillCheck < (renderer.hasFill ? 8000 : 300)) return;
     lastFillCheck = now;
@@ -533,6 +534,14 @@
       engine.status = 'error';
       engine.error = d.message || 'AI engine failed to load';
       engine.errorAt = performance.now();
+    } else if (d.type === 'context-invalidated') {
+      contextLost = true;
+      engine.status = 'error'; engine.filling = 0; engine.inFlight = null;
+      engine.error = d.message || 'Snap Vanish was updated or reloaded. Refresh this tab to reconnect.';
+      engine.errorAt = performance.now();
+      state.captureAt = 0;
+      if (state.phase !== 'idle') restore(engine.error);
+      else say(engine.error);
     } else if (d.type === 'settings') {
       const wasEnabled = settings.enabled;
       Object.assign(settings, d.settings);

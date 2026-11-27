@@ -77,6 +77,100 @@ While you're on camera, Snap Vanish quietly learns what your room looks like **b
 
 ---
 
+## 🧠 The 3 AI Brains Inside (Simple Explanation)
+
+> **No scary words here — just how the magic works! ✨**
+
+Snap Vanish has **3 tiny AI brains** 🧠🧠🧠 living right inside your Chrome browser. They're like **3 mini superheroes** 🦸‍♂️🦸‍♀️🦸, each with one special job. They **never go online** 🚫🌐 — they live and work only on YOUR computer!
+
+---
+
+### 🦸‍♂️ Brain #1 — The Hand Watcher
+
+| | |
+|---|---|
+| 📛 **Name** | Hand Landmarker (by Google) |
+| 🎯 **Job** | Finds your hand in the camera and tracks **21 tiny dots** on your fingers, thumb, and wrist — like an invisible glove 🧤✨ |
+| 🧮 **Brain Size** | ~**3.8 million** tiny decision points (called "parameters") |
+| 📦 **File Size** | **7.5 MB** (smaller than a single phone photo 📸!) |
+| ⚡ **Speed** | Checks your hand **15–30 times per second** — faster than your eyes blink 👁️ |
+
+**How it works, simply:**
+1. 📷 Camera sends a picture → Brain #1 looks at it
+2. 👋 "Is there a hand? YES!" → It places 21 invisible dots on your fingers
+3. 🤌 It watches dot #4 (thumb tip) and dot #12 (middle finger tip) get close together...
+4. 💥 ...then FLY apart → "That looks like a SNAP motion!" 
+5. ✅ It tells Brain #1's partner (the ear 👂) to listen for the click sound!
+
+---
+
+### 🦸‍♀️ Brain #2 — The Body Spotter
+
+| | |
+|---|---|
+| 📛 **Name** | Selfie Segmenter (by Google) |
+| 🎯 **Job** | Figures out which part of the picture is **YOU** 🧑 and which part is the **room behind you** 🏠 |
+| 🧮 **Brain Size** | ~**106,000** decision points (super tiny! 🐜) |
+| 📦 **File Size** | **0.2 MB** (smaller than a text message! 💬) |
+| ⚡ **Speed** | Runs alongside Brain #1, every few frames |
+
+**How it works, simply:**
+1. 📷 Camera sends a picture → Brain #2 colors every dot:
+   - 🟣 Purple = "This is a person!"
+   - 🟢 Green = "This is the room!"
+2. 🏠 All the green parts (the room behind you) get quietly memorized like pieces of a puzzle 🧩
+3. 🧑 The purple parts (you!) get turned into dust particles later! 💨
+
+---
+
+### 🦸 Brain #3 — The Room Painter
+
+| | |
+|---|---|
+| 📛 **Name** | MI-GAN (by Picsart AI Research) |
+| 🎯 **Job** | Paints the missing pieces of your room that the camera has **never seen** (because YOU were sitting in front of them!) 🎨🖌️ |
+| 🧮 **Brain Size** | ~**5.9 million** decision points |
+| 📦 **File Size** | **13.5 MB** (smaller than a 30-second video clip 🎬) |
+| ⚡ **Speed** | Runs once when building your room, then only updates when needed |
+
+**How it works, simply:**
+1. 🧩 Brain #2 collects all the puzzle pieces of your room it CAN see
+2. 🕳️ But there are holes — the parts that were always hidden behind your body!
+3. 🎨 Brain #3 looks at the colors, patterns, and textures around the holes...
+4. 🖌️ ...and paints in what the missing wall/furniture probably looks like!
+5. ✅ Now you have a complete empty room photo — no you in it! 🏠
+
+> 💡 **Want a PERFECT room?** Skip the AI guessing — click **"Capture empty room"** and step out for 5 seconds. Brain #3 takes a break because it's not needed! 😴
+
+---
+
+### 📊 All 3 Brains At a Glance
+
+| Brain | Job | Decision Points | File Size | Internet? |
+|---|---|---|---|---|
+| 🦸‍♂️ Hand Watcher | Tracks your fingers | ~3,800,000 | 7.5 MB | 🚫 Never |
+| 🦸‍♀️ Body Spotter | Separates you from room | ~106,000 | 0.2 MB | 🚫 Never |
+| 🦸 Room Painter | Fills in hidden room parts | ~5,900,000 | 13.5 MB | 🚫 Never |
+| **Total** | **All 3 together** | **~9,800,000** | **21.2 MB** | **🚫 NEVER** |
+
+> That's roughly **~10 million decision points** total 🧮 — which sounds like a lot, but compared to big AI like ChatGPT (~175 **billion**), our 3 brains are **18,000× smaller** 🐜! That's why they can run smoothly right on your computer without needing the internet!
+
+---
+
+### 🔒 Why This Is Safe (The 5 Locks 🔐)
+
+| Lock | What it does |
+|---|---|
+| 🔒 **Lock 1 — Lives on your computer** | All 3 brains are files inside this folder. They never download anything or phone home 📵 |
+| 🔒 **Lock 2 — No internet allowed** | Chrome has a strict rule that **blocks** the brains from connecting to any website, even if they tried 🚧 |
+| 🔒 **Lock 3 — Nothing is saved** | No video recordings, no photos, no audio clips are ever written to your hard drive 💾🚫 |
+| 🔒 **Lock 4 — Nothing is uploaded** | Your face, room, and voice stay on YOUR computer. No company, no server, nobody else ever sees them 🙈 |
+| 🔒 **Lock 5 — Only 2 tiny permissions** | Snap Vanish only asks for "remember my settings" and "run a background helper" — it can't read your tabs, history, passwords, or anything else 🛡️ |
+
+> **Think of it like this:** The 3 brains are like 3 tiny artists 🎨👩‍🎨🧑‍🎨 living inside a **locked room** 🔐 on your computer. They can peek through the camera window 📷 to see your hand and room, do their magic, and hand the result to Chrome — but the door is locked, the phone line is cut ✂️📞, and they can never talk to the outside world! 🌍🚫
+
+---
+
 ## Overview
 
 **Snap Vanish** is a Chrome Manifest V3 extension (`v1.1.0`) that sits locally between your webcam/microphone and browser video calls. When it detects a real finger snap (combining **computer-vision hand tracking** + **acoustic snap-click confirmation**, or manual trigger via button / `Alt+Shift+V`), it:

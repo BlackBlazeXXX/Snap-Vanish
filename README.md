@@ -12,6 +12,71 @@
 
 ---
 
+## 🤔 What Is This? (Simple Explanation)
+
+> **If you're not into tech stuff at all, this section is for you! 💛**
+
+### 🪄 The Magic Trick
+
+Imagine you're on a video call with friends, teachers, or coworkers. You snap your fingers ✊➡️🤌💥 — and **POOF!** You crumble into dust like a movie character, and everyone on the call just sees your empty room 🏠. Your mic goes silent too 🔇, so nobody hears you either.
+
+Snap again ✊➡️🤌💥 — the dust flies back together, and you're **back on camera with your mic working again** 🎤✨!
+
+### 🧠 How Does It Know I Snapped?
+
+Snap Vanish watches your hand through the camera 📷👋 and listens for the "click" sound of a finger snap through your mic 🎙️👂. When it **sees** your fingers snap **and** **hears** the click at the same time — it knows it's a real snap, not just you waving your hands while talking!
+
+You can also just **press a button** or use a **keyboard shortcut** (`Alt+Shift+V`) if snapping doesn't work for you 🎹.
+
+### 🏠 How Does It Show My Empty Room?
+
+While you're on camera, Snap Vanish quietly learns what your room looks like **behind you** 👀🧩. It peeks at the wall, furniture, and background around your body every frame. For the parts it's never seen (because you were sitting in front of them), a smart fill tool 🎨🖌️ paints in what the room probably looks like.
+
+**Want a perfect empty room?** Click **"Capture empty room"** and step out of the camera view for 5 seconds — now Snap Vanish has a real photo of your room with nobody in it! 📸✅
+
+### 🔒 Is My Video Being Sent Somewhere? (Nope!)
+
+**Everything happens right here on YOUR computer** 🖥️🏠.
+
+- 🚫 **Nothing is uploaded** — no video, no audio, no pictures of your room go to any website or company.
+- 🚫 **Nothing is saved** — no recordings, no screenshots stored on your hard drive.
+- 🧠 The smart brain (AI) that tracks your hand and fills your room lives **inside this folder** on your computer — it never talks to the internet.
+- 🔐 The extension is locked down tight so it **can't** make calls to outside websites even if someone tried to make it.
+
+**Think of it like a magic mirror** 🪞✨ — it can see you and do cool effects, but the mirror never tells anyone what it saw!
+
+### 📱 Where Does It Work?
+
+| App | Works? |
+| --- | --- |
+| 📹 **Google Meet** | ✅ Yes! |
+| 💼 **Microsoft Teams** (in browser) | ✅ Yes! |
+| 🎥 **Zoom** (in browser — click "Join from browser") | ✅ Yes! |
+| 💬 **WhatsApp Web** | ✅ Yes! |
+| 🎯 **Practice Room** (built-in safe test area) | ✅ Yes! |
+
+### ⚡ Quick Start
+
+1. 📥 Download and unzip the `snap-vanish` folder somewhere safe.
+2. 🌐 Open Chrome and type `chrome://extensions` in the address bar.
+3. 🔧 Flip on **"Developer mode"** (top right corner).
+4. 📂 Click **"Load unpacked"** and pick the `snap-vanish` folder.
+5. 📌 Click the puzzle icon 🧩 in Chrome's toolbar and **pin** Snap Vanish.
+6. 🎯 Click the Snap Vanish icon → **"Open practice room"** → **"Start camera"** → try snapping!
+7. 🎉 When you see **"Room: ready"**, you're good to go on a real call!
+
+### 💡 Tips & Tricks
+
+- 🎚️ **Snaps not working?** → Slide **"Snap sensitivity"** higher (toward **Forgiving**).
+- 🫰 **Accidental vanishes?** → Slide sensitivity lower (toward **Strict**).
+- ⏱️ **Want faster/slower dust?** → Change **"Dust duration"** (1 second = fast, 6 seconds = dramatic 🎭).
+- 🌬️ **Pick your dust direction!** → Up, down, left, right — your choice which way you crumble.
+- 🔄 **Moved your laptop?** → Click **"Re-learn room"** so it relearns your new background.
+- 🔇 **Your meeting mute still works normally** — Snap Vanish never fights with it!
+- ⚠️ **After updating Snap Vanish**, just refresh any call tab that was already open.
+
+---
+
 ## Overview
 
 **Snap Vanish** is a Chrome Manifest V3 extension (`v1.1.0`) that sits locally between your webcam/microphone and browser video calls. When it detects a real finger snap (combining **computer-vision hand tracking** + **acoustic snap-click confirmation**, or manual trigger via button / `Alt+Shift+V`), it:
